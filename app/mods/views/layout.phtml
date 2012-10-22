@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="UTF-8" />
+		<meta name="author" content="Protarget Estrategia Promocional" />
+		<meta name="description" content="I'm a web developer living in Guadalajara, Jalisco waiting for freelance projects">
+		<meta name="keywords" content="development, desarrollo, web, programador, programmer, paul, paul soberanes, soberanes, html, php, css, web development, developer, guadalajara, jalisco">
+		<title>Paul Soberanes |Web Developer</title>
+		<link type="image/x-icon" href="favicon.ico" rel="icon" />
+		<link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata:700,400' rel='stylesheet' type='text/css'>
+		<link href="<?= URL;?>/assets/style/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <!--[if lt IE 9]>
+            <script type="text/javascript">
+               document.createElement("nav");
+               document.createElement("header");
+               document.createElement("footer");
+               document.createElement("section");
+               document.createElement("article");
+               document.createElement("aside");
+               document.createElement("hgroup");
+            </script>
+        <![endif]-->
+	</head>
+	<body>
+		<div class="main" id="main">
+				<?php echo $content; ?>
+		</div>
+		<footer>Copyright &copy; <?= date('Y');?> Paúl Soberanes. All Rights Reserved.</footer>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+		<script type="text/javascript" src="<?= URL;?>/assets/js/jquery.transit.js"></script>
+		<script type="text/javascript">
+			$(document).on("ready",function(){
+				$("#main").animate({
+				    opacity: 0.25,
+				    left: '+=50',
+				    height: 'toggle'
+				}, 5000, function(){
+					$(this).animate({
+						opacity: 1
+					}).delay(1000);
+					rotate_h1();
+				});
+
+				$(".icon").hover(function(){
+					$(this).transition({
+						opacity: 0.1,
+   						scale: 1.6
+					});
+				},function(){
+					$(this).transition({
+						opacity: 1,
+   						scale: 1
+					});				
+				});
+
+
+				function rotate_h1(){
+					$("h1").transition({
+						rotateX: '180deg'
+					},function() {
+					    $(this).delay(1000).transition({ rotateX: '0deg' }).stop();
+					});
+				}
+				
+			});
+		</script>
+		<?php js_print(); ?>
+	</body>
+</html>

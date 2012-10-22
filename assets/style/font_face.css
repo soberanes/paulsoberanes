@@ -1,0 +1,54 @@
+@CHARSET "ISO-8859-1";
+@font-face {
+    font-family: 'ColaborateThinRegular';
+    src: url('fonts/Colaborate/ColabThi-webfont.eot');
+    src: url('fonts/Colaborate/ColabThi-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Colaborate/ColabThi-webfont.woff') format('woff'),
+         url('fonts/Colaborate/ColabThi-webfont.ttf') format('truetype'),
+         url('fonts/Colaborate/ColabThi-webfont.svg#ColaborateThinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ColaborateLightRegular';
+    src: url('fonts/Colaborate/ColabLig-webfont.eot');
+    src: url('fonts/Colaborate/ColabLig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Colaborate/ColabLig-webfont.woff') format('woff'),
+         url('fonts/Colaborate/ColabLig-webfont.ttf') format('truetype'),
+         url('fonts/Colaborate/ColabLig-webfont.svg#ColaborateLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/Bebas/BebasNeue-webfont.eot');
+    src: url('fonts/Bebas/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Bebas/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/Bebas/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/Bebas/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Web_Serveroff';
+    src: url('fonts/Web_Serveroff/Web_Serveroff-webfont.eot');
+    src: url('fonts/Web_Serveroff/Web_Serveroff-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Web_Serveroff/Web_Serveroff-webfont.woff') format('woff'),
+         url('fonts/Web_Serveroff/Web_Serveroff-webfont.ttf') format('truetype'),
+         url('fonts/Web_Serveroff/Web_Serveroff-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Web_Serveroff-Italic';
+    src: url('fonts/Web_Serveroff/Web_Serveroff-Italic-webfont.eot');
+    src: url('fonts/Web_Serveroff/Web_Serveroff-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Web_Serveroff/Web_Serveroff-Italic-webfont.woff') format('woff'),
+         url('fonts/Web_Serveroff/Web_Serveroff-Italic-webfont.ttf') format('truetype'),
+         url('fonts/Web_Serveroff/Web_Serveroff-Italic-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

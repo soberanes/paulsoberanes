@@ -1,0 +1,128 @@
+body,p,h1,h2,h3,h4,h5{
+	margin: 0 auto;
+	background:#636472;
+	font-family: 'Inconsolata', sans-serif;
+}
+.clearfix{clear:both;}
+
+#main{
+	margin: 0 auto 0 35%;
+    position: relative;
+    width: 850px;
+    display: none;
+}
+
+#main header .title{
+	color:#333333;text-decoration: none;
+}
+
+h1{
+	font-family: 'Arvo', serif;
+	color:#333333;
+	width: 580px;
+	height: 90px;
+	top: 175px;
+	position: relative;
+	font-size: 4em;
+	text-transform: uppercase;
+	letter-spacing: -4px;
+}
+
+#main .subtitle{
+	
+	font-size: 2em;
+	color:#c2c2c6;
+	width: 580px;
+	height: 90px;
+	top: 160px;
+	position: relative;
+}
+
+#main .speach{
+	color:#c2c2c6;
+	width: 580px;
+	height: 90px;
+	top: 130px;
+	position: relative;
+	text-align: justify;
+
+}
+
+#main .speach span{
+	color:#f0d700;
+}
+
+#main .speach a{
+	text-decoration: none;
+	color:#f0d700;
+
+}
+
+#main .social{
+	width: 580px;
+	top: 165px;
+	position: relative;
+}
+
+#main .social div{
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+}
+
+#main .social div a{
+	text-decoration: none;
+	visibility: visible;
+	zoom: 1;
+	opacity: 0;
+	top: 0px;
+	padding: 14px;
+	padding-top: 0px;
+}
+
+#main .social #facebook{background: url('images/facebook.png') no-repeat;}
+#main .social #twitter{background: url('images/twitter.png') no-repeat;}
+#main .social #gplus{background: url('images/gplus.png') no-repeat;}
+#main .social #linkedin{background: url('images/linkedin.png') no-repeat;}
+#main .social #skype{background: url('images/skype.png') no-repeat;}
+#main .social #instagram{background: url('images/instagram.png') no-repeat;}
+#main .social #email{background: url('images/email.png') no-repeat;}
+#main .left_panel{float:left;}
+#main .right_panel{float:left;}
+#main .left_panel img{
+	height: 277px;
+    position: relative;
+    right: 300px;
+    top: -112px;
+    width: 277px;
+}
+footer{
+	color:#c2c2c6;
+	font-size: 11px;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#resume{
+    padding:50px;
+    margin: 0 auto;
+    width:1024px;
+}
+#resume p{
+    background: #FFFFFF;
+    padding: 50px;
+    -webkit-box-shadow: 5px 5px 10px 4px #333333;
+    box-shadow: 5px 5px 10px 4px #333333;
+}
+
+#resume p span{
+    color:#ff0000;
+    font-family: 'Arvo', serif;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+
