@@ -63,7 +63,7 @@ try{
 			throw new Exception("La acción solicitada no esta disponible para {$controller}");
 		}
 	}else{
-		//throw new Exception('No existe el controlador');
+		throw new Exception('No existe el controlador');
 	}
 }catch (Exception $ex){
 	$exception = new Controller_Exception();
