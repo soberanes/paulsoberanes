@@ -1,6 +1,7 @@
 <?php
 session_start();
 ob_start();
+header('p3p: CP="NOI ADM DEV PSAi COM NAV OUR OTR STP IND DEM"');
 $uri = substr($_SERVER["SCRIPT_NAME"],0,strripos($_SERVER["SCRIPT_NAME"],"/"));
 
 $protocol = ( isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') ? 'https' : 'http';
@@ -35,25 +36,31 @@ $get = $get[0];
 $get = explode("/",$get);
 
 $_GET['controller'] = $controller = $get[0] ? $get[0] : 'index';
-$_GET['action']     = $action     = (isset($get[1]) && $get[1] ) ? $get[1] : "index";
+$_GET['action']     = $action     = (isset($get[1]) && $get[1] )? $get[1] : "index";
 
 if(count($get)>2){
+	$items = count($get); 
 	for($item = 2; $item < $items; $item+=2){
 		if($get[$item]){
-			$_GET[ $get[$item] ] = isset($get[$item+1])?$get[$item+1]:TRUE;
+			$_GET[ $get[$item] ] = isset($get[$item+1])?$get[$item+1]:count($_GET);
 		}
 	}
 }
 
 $response   = isset($_GET['response']) ? $_GET['response'] : 'html';
 
-$controller = ucfirst(strtolower($controller));
+$controller = str_replace("-"," ",$controller);
+$controller = ucwords(strtolower( $controller ));
+$controller = str_replace(" ",NULL, $controller);
+$action = str_replace("-"," ",$action);
+$action = ucwords(strtolower( $action ));
+$action = str_replace(" ",NULL, $action);
 
 $controller_class = "Controller_{$controller}";
 try{
 	if(class_exists($controller_class)){
-		if( in_array( $action.'Action' , get_class_methods($controller_class) ) ){
-			$controller_object = new $controller_class();
+		$controller_object = new $controller_class();
+		if( is_callable( array($controller_object, $action.'Action') ) ){
 			if( $controller_object instanceof Controller_Abstract ){
 				$controller_object->dispatch( $action );
 			}else{
@@ -63,14 +70,13 @@ try{
 			throw new Exception("La acción solicitada no esta disponible para {$controller}");
 		}
 	}else{
-		//throw new Exception('No existe el controlador');
 	}
 }catch (Exception $ex){
 	$exception = new Controller_Exception();
 	$exception->dispatch('showError', $ex);
 }
 
-is_ajax() && $response == 'json' && header('Content-type: application/json');
+ is_ajax() || $response == 'json' && header('Content-type: application/json');
 
 if( !is_ajax() && $response == 'html' ){
 	$content  = 'content';
