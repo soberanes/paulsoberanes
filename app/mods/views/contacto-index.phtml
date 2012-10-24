@@ -1,8 +1,5 @@
 <section class="body">
-    
-    	    
-    <form method="post" action="index/recibe">
-    
+    <form method="post" action="contacto/recibe">
         <label>Name</label>
         <input name="name" placeholder="Escribe aqu&iacute;" />
         
@@ -13,10 +10,9 @@
         <textarea name="message" placeholder="Escribe aqu&iacute;"></textarea>
         
         <label>*What is 2+2? (Anti-spam)</label>
-        <input name="human" placeholder="Escribe aqu&iacute;">        
+        <input name="human" placeholder="Escribe aqu&iacute;" />
 
         <input id="submit" name="submit" type="submit" value="Enviar" />
-    
+        <?php if($var == 1){ echo "Mensaje enviado."; } ?>
     </form>
-    
 </section>
