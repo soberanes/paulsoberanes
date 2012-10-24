@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+
+.body {
+	width:576px;
+	margin:0 auto;
+	display:block;
+}
+
+form {
+	width:459px;
+	margin:0 auto;
+}
+
+label {
+	display:block;
+	margin-top:20px;
+	letter-spacing:2px;
+}
+
+input, textarea {
+	width:439px;
+	height:27px;
+	background:#efefef;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
+}
+
+input:focus, textarea:focus {
+	border:1px solid #97d6eb;
+}
+
+textarea {
+	height:213px;
+	font-family:Arial, Helvetica, sans-serif;
+	background:url(images/textarea-bg.jpg) right no-repeat #efefef;
+}
+
+#submit {
+	background:#ffffff;
+	color:#000000;
+	width:127px;
+	height:38px;
+	border:none;
+	margin-top:20px;
+	cursor:pointer;
+}
+
+	#submit:hover {
+		opacity:0.9;
+	}
+
+footer a img {
+	border:none;
+	float:right;
+	margin:0px 59px 40px 0px;
+}
