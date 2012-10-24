@@ -64,12 +64,14 @@ try{
 			if( $controller_object instanceof Controller_Abstract ){
 				$controller_object->dispatch( $action );
 			}else{
-				throw new Exception("{$controller} no es un controlador válido");
+				throw new Exception("{$controller} no es un controlador v�lido");
 			}
 		} else {
-			throw new Exception("La acción solicitada no esta disponible para {$controller}");
+			throw new Exception("La acci�n solicitada no esta disponible para {$controller}");
 		}
 	}else{
+		ob_get_clean();
+		header('Location: '.URL.'/error-page');
 	}
 }catch (Exception $ex){
 	$exception = new Controller_Exception();
