@@ -35,7 +35,7 @@ $get = $get[0];
 $get = explode("/",$get);
 
 $_GET['controller'] = $controller = $get[0] ? $get[0] : 'index';
-$_GET['action']     = $action     = (isset($get[1]) && $get[1] )? $get[1] : "index";
+$_GET['action']     = $action     = (isset($get[1]) && $get[1] ) ? $get[1] : "index";
 
 if(count($get)>2){
 	for($item = 2; $item < $items; $item+=2){
